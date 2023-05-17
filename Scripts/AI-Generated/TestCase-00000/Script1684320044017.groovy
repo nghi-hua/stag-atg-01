@@ -1,8 +1,8 @@
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import internal.GlobalVariable as GlobalVariable
 
 'Initialize test session: Open browser and set view port'
 
@@ -68,7 +68,7 @@ WebUI.navigateToUrl(GlobalVariable.application_domain + '/inventory.html')
 
 'step 3: At Page_inventory_html click on hyperlink_item_4_img_link --> navigate to Page_inventory-item_html'
 
-testObj = findTestObject('')
+testObj = findTestObject('Object Repository/Page_inventory_html/hyperlink_object')
 
 WebUI.delay(3)
 
@@ -82,7 +82,7 @@ WebUI.enhancedClick(testObj)
 
 'step 4: At Page_inventory-item_html click on button_back_to_products --> navigate to Page_inventory_html'
 
-testObj = findTestObject('')
+testObj = findTestObject('Object Repository/Page_inventory-item_html/button_object')
 
 WebUI.delay(3)
 
@@ -96,7 +96,7 @@ WebUI.enhancedClick(testObj)
 
 'step 5: At Page_inventory_html click on hyperlink_object --> navigate to Page_cart_html'
 
-testObj = findTestObject('')
+testObj = findTestObject('Object Repository/Page_inventory_html/hyperlink_object_1')
 
 WebUI.delay(3)
 
@@ -110,7 +110,7 @@ WebUI.enhancedClick(testObj)
 
 'step 6: At Page_cart_html click on button_checkout --> navigate to Page_checkout-step-one_html'
 
-testObj = findTestObject('')
+testObj = findTestObject('Object Repository/Page_cart_html/button_object')
 
 WebUI.delay(3)
 
@@ -124,7 +124,7 @@ WebUI.enhancedClick(testObj)
 
 'step 7: At Page_checkout-step-one_html input on input_first_name'
 
-testObj = findTestObject('')
+testObj = findTestObject('Object Repository/Page_checkout-step-one_html/input_object')
 
 WebUI.delay(3)
 
@@ -138,7 +138,7 @@ WebUI.setText(testObj, var_1_input_object)
 
 'step 8: At Page_checkout-step-one_html input on input_last_name'
 
-testObj = findTestObject('')
+testObj = findTestObject('Object Repository/Page_checkout-step-one_html/input_object_1')
 
 WebUI.delay(3)
 
@@ -152,7 +152,7 @@ WebUI.setText(testObj, var_2_input_object_1)
 
 'step 9: At Page_checkout-step-one_html input on input_postal_code'
 
-testObj = findTestObject('')
+testObj = findTestObject('Object Repository/Page_checkout-step-one_html/input_object_2')
 
 WebUI.delay(3)
 
@@ -166,7 +166,7 @@ WebUI.setText(testObj, var_3_input_object_2)
 
 'step 10: At Page_checkout-step-one_html click on input_continue --> navigate to Page_checkout-step-two_html'
 
-testObj = findTestObject('')
+testObj = findTestObject('Object Repository/Page_checkout-step-one_html/input_object_3')
 
 WebUI.delay(3)
 
@@ -180,7 +180,7 @@ WebUI.enhancedClick(testObj)
 
 'step 11: At Page_checkout-step-two_html click on button_finish --> navigate to Page_checkout-complete_html'
 
-testObj = findTestObject('')
+testObj = findTestObject('Object Repository/Page_checkout-step-two_html/button_object')
 
 WebUI.delay(3)
 
